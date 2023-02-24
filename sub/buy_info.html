@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <title>반장님</title>
+    <script type='text/javascript'>
+        $(function () {
+            $("input[name='test']").click(function () {
+                $('#show-me').css('display', ($(this).val() === 'a') ? 'block' : 'none');
+            });
+        })
+
+        function count(type) {
+            // 결과를 표시할 element
+            const resultElement = document.getElementById('result');
+
+            // 현재 화면에 표시된 값
+            let number = resultElement.innerText;
+
+            // 더하기/빼기
+            if (type === 'plus') {
+                number = parseInt(number) + 5000;
+            } else if (type === 'minus') {
+                number = parseInt(number) - 5000;
+            }
+
+            // 결과 출력
+            resultElement.innerText = number;
+        }
+    </script>
+</head>
+
+<body>
+    <header class="hd1">
+        <div class="hd_top1">
+            <button type="button" onclick="history.back()" class="top_back2">
+                <div></div>
+            </button>
+            <div class="hd_map">
+                <p class="big_title">선택한 상품이름</p>
+            </div>
+            <button type="button" class="bt_share"><img src="../img/share_btn.png" alt=""></button>
+        </div>
+    </header>
+    <div class="app_wrap app_wrap2">
+
+        <div class="cart_1">
+            <div class="top_box">
+                <figure><img src="../img/b_img.png" alt=""></figure>
+                <button class="bt_info">제품 상세 내역</button>
+                <div class="infobox">
+                    <p class="ti">일반석고</p>
+                    <p>벽체와 천장에 효과적인 마감재 입니다. 벽체 및 천장의 모든 건식공법에 적합</p>
+                </div>
+            </div>
+            <div class="mid_box">
+                <p class="st">가격</p>
+                <p>2,800원 ~ 5,000원</p>
+            </div>
+            <ul class="bot_box">
+                <li>
+                    <select>
+                        <option value="">품목</option>
+                    </select>
+                </li>
+                <li>
+                    <select>
+                        <option value="">옵션을 선택해주세요</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bi">
+            <p>구매갯수</p>
+            <div class="pl_mi">
+                <input type='button' onclick='count("minus")' value='-'>
+                <div id='result'>0</div>
+                <input type='button' onclick='count("plus")' value='+'>
+            </div>
+        </div>
+
+        <div class="cart_2">
+            <p>선택한 옵션</p>
+            <ul class="choice_cart">
+                <li>
+                    <div>
+                        <p>옵션1</p>
+                    </div>
+                    <div>
+                        <div class="pl_mi">
+                            <input type='button' onclick='count("minus")' value='-'>
+                            <div id='result'>0</div>
+                            <input type='button' onclick='count("plus")' value='+'>
+                        </div>
+                        <p class="total_p">0원</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <p>옵션2</p>
+                    </div>
+                    <div>
+                        <div class="pl_mi">
+                            <input type='button' onclick='count("minus")' value='-'>
+                            <div id='result'>0</div>
+                            <input type='button' onclick='count("plus")' value='+'>
+                        </div>
+                        <p class="total_p">0원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="ft_wrap">
+            <button type="button" onclick="location.href='order.html'">장바구니 담기</button>
+        </div>
+
+
+
+        <div class="trick trick2"></div>
+    </div>
+</body>
+
+</html>

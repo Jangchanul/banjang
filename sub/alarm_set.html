@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <title>반장님</title>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 16.667vw;
+            height: 9.444vw;
+            vertical-align: middle;
+        }
+
+        /* Hide default HTML checkbox */
+        .switch input {
+            display: none;
+        }
+
+        /* The slider */
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 7.222vw;
+            width: 7.222vw;
+            left: 1.111vw;
+            bottom: 1.111vw;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #47BBAB;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #47BBAB;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(7.222vw);
+            -ms-transform: translateX(7.222vw);
+            transform: translateX(7.222vw);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 9.444vw;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body style="background: #F8F8F8;">
+    <header class="hd1 hd2">
+        <div class="hd_top1">
+            <button type="button" onclick="history.back()" class="top_back2">
+                <div></div>
+            </button>
+            <div class="hd_map">
+                <h2 class="sc_8">알림설정</h2>
+            </div>
+            <button type="button" class="top_basket not_hd"></button>
+        </div>
+    </header>
+    <section class="alarm_set">
+        <div class="top">
+            <p>알림설정</p>
+        </div>
+        <ul class="mid">
+            <li>
+                <div>
+                    <div class="l">
+                        <p class="st">이벤트 혜택</p>
+                        <p class="sm">쿠폰 및 마케팅정보 알림</p>
+                    </div>
+                    <div class="r">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="l">
+                        <p class="st">리뷰쓰기</p>
+                        <p class="sm">리뷰쓰기 알림(22시~08시 미발송)</p>
+                    </div>
+                    <div class="r">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="l">
+                        <p class="st">리뷰댓글</p>
+                        <p class="sm">내 리뷰에 달린 댓글알림(22시~08시 미발송)</p>
+                    </div>
+                    <div class="r">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div class="l">
+                        <p class="st">배송현황</p>
+                        <p class="sm">반장님 배송상태 실시간 알림</p>
+                    </div>
+                    <div class="r">
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+
+    
+</body>
+
+</html>

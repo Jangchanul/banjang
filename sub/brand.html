@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <title>반장님</title>
+</head>
+
+<body>
+    <header class="hd1 hd2">
+        <div class="hd_top1">
+            <button type="button" onclick="history.back()" class="top_back top_back2">
+                <div></div>
+            </button>
+            <div class="hd_map">
+                <h2 class="sc_8">브랜드관</h2>
+            </div>
+            <button type="button" class="top_basket top_plus" onclick="location.href='#'"></button>
+        </div>
+    </header>
+    <section class="brand">
+        <div #swiperRef="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" onclick="location.href='brand_info.html'"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide" onclick="location.href='brand_info.html'"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+                <div class="swiper-slide"><img src="../img/brand1.png" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1,
+                centeredSlides: true,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+            });
+
+            var appendNumber = 10;
+            var prependNumber = 1;
+            document
+                .querySelector(".prepend-2-slides")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    swiper.prependSlide([
+                        '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                        '<div class="swiper-slide">Slide ' + --prependNumber + "</div>",
+                    ]);
+                });
+            document
+                .querySelector(".prepend-slide")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    swiper.prependSlide(
+                        '<div class="swiper-slide">Slide ' + --prependNumber + "</div>"
+                    );
+                });
+            document
+                .querySelector(".append-slide")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    swiper.appendSlide(
+                        '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>"
+                    );
+                });
+            document
+                .querySelector(".append-2-slides")
+                .addEventListener("click", function (e) {
+                    e.preventDefault();
+                    swiper.appendSlide([
+                        '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                        '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
+                    ]);
+                });
+        </script>
+        <div class="tab">
+            <ul class="tabnav">
+                <li><a href="#tab01">전체</a></li>
+                <li><a href="#tab02">목공자재</a></li>
+                <li><a href="#tab03">파벽</a></li>
+                <li><a href="#tab04">타일/도기</a></li>
+                <li><a href="#tab05">도배</a></li>
+                <li><a href="#tab06">무늬목</a></li>
+                <li><a href="#tab07">페인트</a></li>
+                <li><a href="#tab08">전기/조명</a></li>
+                <li><a href="#tab09">몰딩</a></li>
+                <li><a href="#tab10">바닥자재</a></li>
+                <li><a href="#tab11">폐기물처리</a></li>
+                <li><a href="#tab12">스카이/사다리차</a></li>
+                <li><a href="#tab13">경량</a></li>
+                <li><a href="#tab14">인테리어필름</a></li>
+                <li><a href="#tab15">냉난방기</a></li>
+                <li><a href="#tab16">폴딩도어</a></li>
+                <li><a href="#tab17">기타</a></li>
+            </ul>
+            <div class="tabcontent">
+                <div id="tab01">
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/brand4.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="bt_more">더보기</button>
+                </div>
+                <div id="tab02">
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/brand4.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="brand_list" onclick="location.href='brand_info.html'">
+                        <div class="a1">
+                            <figure class="b1"><img src="../img/no_img.png" alt=""></figure>
+                            <div class="b2">
+                                <figcaption>업체명</figcaption>
+                                <p>업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다업체 소개글이 표시됩니다</p>
+                            </div>
+                        </div>
+                        <ul class="a2">
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                            <li><img src="../img/brand2.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="bt_more">더보기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <ul class="ft1_wrap">
+                <li onclick="location.href='/banjangnim/org/sub/search.html'">
+                    <div></div>
+                    <p>검색</p>
+                </li>
+                <li onclick="location.href='/banjangnim/org/sub/wish.html'">
+                    <div></div>
+                    <p>찜</p>
+                </li>
+            </ul>
+            <button type="bottom" onclick="location.href='/banjangnim/org/index.html'"><img src="../img/ft3.png"
+                    alt=""></button>
+            <ul class="ft2_wrap">
+                <li onclick="location.href='/banjangnim/org/sub/order_history.html'">
+                    <div></div>
+                    <p>주문내역</p>
+                </li>
+                <li onclick="location.href='/banjangnim/org/sub/mypage.html'">
+                    <div></div>
+                    <p>MY</p>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        $(function () {
+            $(function () {
+                $('.tabcontent > div').hide();
+                $('.tabnav a').click(function () {
+                    $('.tabcontent > div').hide().filter(this.hash).fadeIn();
+                    $('.tabnav a').removeClass('active');
+                    $(this).addClass('active');
+                    return false;
+                }).filter(':eq(0)').click();
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <title>반장님</title>
+</head>
+<script>
+    $(function () {
+        $('.starRev span').click(function () {
+            $(this).parent().children('span').removeClass('on');
+            $(this).addClass('on').prevAll('span').addClass('on');
+            return false;
+        });
+    })
+</script>
+
+<body>
+    <header class="hd1">
+        <div class="hd_top1">
+            <button type="button" onclick="history.back()" class="top_back2">
+                <div></div>
+            </button>
+            <div class="hd_map">
+                <p class="sc_8">후기작성</p>
+            </div>
+            <button type="button" class="not_hd"></button>
+        </div>
+    </header>
+    <section class="review">
+        <ul class="top">
+            <li class="s_box">
+                <p class="stst">별정</p>
+                <div class="starRev">
+                    <span class="starR"></span>
+                    <span class="starR"></span>
+                    <span class="starR"></span>
+                    <span class="starR"></span>
+                    <span class="starR"></span>
+                </div>
+            </li>
+            <li>
+                <p class="stst">닉네임</p>
+                <p class="gg">반장님111</p>
+            </li>
+        </ul>
+        <textarea placeholder="후기를 작성해주세요."></textarea>
+        <div class="show_box">
+            <input type="file" id="imgSelector" />
+            <label for="imgSelector"><img src="../img/camera.png" alt=""></label>
+            <div class="imgbox">
+                <!-- 미리보기 영역 -->
+                <!-- <img src="https://via.placeholder.com/80x80" id="preview" /> -->
+            </div>
+        </div>
+        <button class="bt_done">작성완료</button>
+    </section>
+    
+    <script>
+        $(function () {
+            $('#imgSelector').change(function () {
+                setImageFromFile(this, '#preview');
+            });
+
+            function setImageFromFile(input, expression) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $(expression).attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $(".imgbox img").click(function () {
+                $(this).remove();
+            });
+        });
+    </script>
+</body>
+
+</html>

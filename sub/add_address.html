@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <title>반장님</title>
+</head>
+
+<body>
+    <header class="hd1 hd2">
+        <div class="hd_top1">
+            <button type="button" onclick="history.back()" class="top_back top_back2">
+                <div></div>
+            </button>
+            <div class="hd_map">
+                <h2 class="sc_8">배송지 관리</h2>
+            </div>
+            <button type="button" class="top_basket top_plus" onclick="location.href='#'"></button>
+        </div>
+    </header>
+
+    <section class="add_address1">
+        <p class="strong">배송지 정보입력</p>
+        <ul>
+            <li>
+                <p>수령인</p>
+                <input type="text" style="width: 50%;margin-left: -8vw;">
+            </li>
+            <li>
+                <p>주소</p>
+                <div>
+                    <div><input type="text" class="sch"></div>
+                    <input type="text">
+                    <input type="text" placeholder="상세 주소를 입력해주세요.">
+                </div>
+            </li>
+            <li>
+                <p>연락처</p>
+                <input type="number" placeholder="연락처를 입력해주세요.">
+            </li>
+            <li>
+                <p>연락처2</p>
+                <input type="number" placeholder="연락처를 입력해주세요.">
+            </li>
+        </ul>
+        
+        <button class="bt_am" onclick="location.href='address.html'">저장</button>
+    </section>
+
+
+
+    <div class="trick"></div>
+    <footer>
+        <div>
+            <ul class="ft1_wrap">
+                <li onclick="location.href='/banjangnim/org/sub/search.html'">
+                    <div></div>
+                    <p>검색</p>
+                </li>
+                <li onclick="location.href='/banjangnim/org/sub/wish.html'">
+                    <div></div>
+                    <p>찜</p>
+                </li>
+            </ul>
+            <button type="bottom" onclick="location.href='/banjangnim/org/index.html'"><img src="../img/ft3.png"
+                    alt=""></button>
+            <ul class="ft2_wrap">
+                <li onclick="location.href='/banjangnim/org/sub/order_history.html'">
+                    <div></div>
+                    <p>주문내역</p>
+                </li>
+                <li onclick="location.href='/banjangnim/org/sub/mypage.html'">
+                    <div></div>
+                    <p>MY</p>
+                </li>
+            </ul>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

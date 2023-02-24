@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <title>반장님</title>
+    <script>
+        $(function () {
+            $('.ck').click(function () {
+                $('.popupbox').hide()
+            })
+            $('.bt_re').click(function () {
+                $('.popupbox').show()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <header class="hd1">
+        <div class="hd_top1">
+            <button type="button" onclick="history.back()" class="top_back2">
+                <div></div>
+            </button>
+            <h2 class="sc_8">
+                <p style="font-family: s-core-dream-extrabold !important;">최고의 반장님<b
+                        style="font-family: s-core-dream-extrabold;color: #C7B299;">들</b></p>
+            </h2>
+            <button type="button" class="top_search not_hd"></button>
+        </div>
+
+    </header>
+    <section class="bj_info1">
+        <div class="top">
+            <button onclick="location.href='banjang_info.html'">반장님 소개</button>
+            <button class="on" onclick="location.href='banjang_info1.html'">리뷰</button>
+        </div>
+        <div class="star_wrap">
+            <div class="review_flex">
+                <div class="le">
+                    <p>4.9</p>
+                    <div class="star_box">
+                        <span class="star_bg" style="width: 100%;"></span>
+                    </div>
+                </div>
+                <div class="ri">
+                    <div class="a">
+                        <p>5점</p>
+                        <div class="bg_bar">
+                            <div class="bar" style="width: 100%;"></div>
+                        </div>
+                        <p>911</p>
+                    </div>
+                    <div class="a">
+                        <p>4점</p>
+                        <div class="bg_bar">
+                            <div class="bar" style="width: 10%;"></div>
+                        </div>
+                        <p>45</p>
+                    </div>
+                    <div class="a">
+                        <p>3점</p>
+                        <div class="bg_bar">
+                            <div class="bar"></div>
+                        </div>
+                        <p>12</p>
+                    </div>
+                    <div class="a">
+                        <p>2점</p>
+                        <div class="bg_bar">
+                            <div class="bar"></div>
+                        </div>
+                        <p>4</p>
+                    </div>
+                    <div class="a">
+                        <p>1점</p>
+                        <div class="bg_bar">
+                            <div class="bar"></div>
+                        </div>
+                        <p>3</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="review_con" style="width:92%;margin: 0 auto;">
+            <div class="mid2" style="border-bottom: 1px solid #DDD;">
+                <p class="st1">최근리뷰 45개</p>
+                <p class="st2">사장님댓글 0개</p>
+                <button class="bt_re">클린리뷰 시스템 작동중</button>
+                <div class="m_top" style="padding-bottom: 3.333vw;">
+                    <div class="le">
+                        <input type="checkbox" id="ck1" name="ck1">
+                        <label for="ck1">사진리뷰만</label>
+                    </div>
+                    <div class="ri">
+                        <button class="on">최신순</button>
+                        <button>별점높은순</button>
+                        <button>별점낮은순</button>
+                    </div>
+                </div>
+            </div>
+            <!--mid2-->
+            <button class="bt_review_bj" type="button" onclick="location.href='banjang_review_write.html'">후기작성</button>
+            <ul class="bot">
+                <div class="b_top">
+                    <figure class="user"><img src="../img/user.png" alt=""></figure>
+                    <div class="info">
+                        <div>
+                            <p class="st1">회원닉네임</p>
+                            <figure class="n"><img src="../img/qe1.png" alt=""></figur>
+                        </div>
+                        <div>
+                            <figure class="star"><img src="../img/info_star.png" alt=""></figure>
+                            <p class="sm">어제</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b_mid">
+                    <img src="../img/img_b.png" alt="">
+                </div>
+                <p class="bb">리뷰내용자리입니다.</p>
+                <ul class="tag_box">
+                    <li>구매상품명1</li>
+                    <li>구매상품명2</li>
+                </ul>
+            </ul>
+            <ul class="bot">
+                <div class="b_top">
+                    <figure class="user"><img src="../img/user.png" alt=""></figure>
+                    <div class="info">
+                        <div>
+                            <p class="st1">회원닉네임</p>
+                            <figure class="n"><img src="../img/qe1.png" alt=""></figur>
+                        </div>
+                        <div>
+                            <figure class="star"><img src="../img/info_star.png" alt=""></figure>
+                            <p class="sm">어제</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b_mid">
+                    <img src="../img/ss1.png" alt="">
+                    <img src="../img/img_b.png" alt="">
+                </div>
+                <p class="bb">리뷰내용자리입니다.</p>
+                <ul class="tag_box">
+                    <li>구매상품명1</li>
+                    <li>구매상품명2</li>
+                </ul>
+            </ul>
+        </div>
+    </section>
+    <div class="popupbox" style="display: none;">
+        <div class="bg"></div>
+        <div class="popup">
+            <p class="strong">클린리뷰 시스템이 작동중입니다.</p>
+            <p class="nor">작성된 모든 리뷰는 클린리뷰 시스템에 의해 모니터링되며, 확인한 리뷰에 이상없는 경우 즉시 공개됩니다. 리뷰가 보이지 않을 경우 잠시만 기다려주세요.</p>
+            <button class="ck">확인</button>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
